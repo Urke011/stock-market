@@ -39,7 +39,7 @@
                 <p class="mb-5 text-white">Home</p>
                 <p class="mb-5 text-white">Blog, News</p>
                 <p class="mb-5 text-white">Setings</p>
-                <p class="mb-5 text-white">Forum</p>
+                <p class="mb-5 text-white"><a href="/forum">Forum</a></p>
                 </div>
             </div>
         </div>

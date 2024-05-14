@@ -1,14 +1,17 @@
 <?php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Stock extends Model
+class Forum extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'name',
-        'forum_text'
+        'title',
+        'num_stocks',
+        'price',
+        'description'
     ];
 }
