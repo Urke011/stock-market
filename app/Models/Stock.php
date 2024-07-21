@@ -9,6 +9,8 @@ class Stock extends Model
     use HasFactory;
     protected $fillable=[
         'name',
-        'forum_text'
+        'num_stocks',
+        'price',
+        'description'
     ];
 }

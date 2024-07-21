@@ -33,7 +33,7 @@ class StockController extends Controller
             'name'=> 'required',
             'num_stocks'=> 'required|numeric',
             'price'=> 'required|decimal:0,2',
-            'description'=> 'nullable',
+            'description'=> 'required|nullable',
         ]);
 
         $stock->update($data);

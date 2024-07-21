@@ -9,9 +9,7 @@ class Forum extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'title',
-        'num_stocks',
-        'price',
-        'description'
+        'name',
+        'forum_text'
     ];
 }
