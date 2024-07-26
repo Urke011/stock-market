@@ -9,7 +9,8 @@ class Forum extends Model
 {
     use HasFactory;
     protected $fillable=[
-        'name',
-        'forum_text'
+        'commentOwner',
+        'commentEmail',
+        'commentText'
     ];
 }

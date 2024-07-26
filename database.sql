@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 21, 2024 at 10:45 PM
+-- Generation Time: Jul 26, 2024 at 11:03 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,34 +24,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `stocks`
+-- Table structure for table `forums`
 --
 
-CREATE TABLE `stocks` (
+CREATE TABLE `forums` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
-  `name` varchar(255) NOT NULL,
-  `num_stocks` int(11) NOT NULL,
-  `price` int(11) NOT NULL,
-  `description` varchar(255) NOT NULL
+  `commentOwner` varchar(255) NOT NULL,
+  `commentEmail` varchar(255) NOT NULL,
+  `commentText` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data for table `stocks`
+-- Dumping data for table `forums`
 --
 
-INSERT INTO `stocks` (`id`, `created_at`, `updated_at`, `name`, `num_stocks`, `price`, `description`) VALUES
-(1, '2024-07-21 18:44:41', '2024-07-21 18:44:41', 'apple test', 2, 345, 'some tests action');
+INSERT INTO `forums` (`id`, `created_at`, `updated_at`, `commentOwner`, `commentEmail`, `commentText`) VALUES
+(1, '2024-07-26 19:03:12', '2024-07-26 19:03:12', 'uros', 'uros@gamil.com', 'Hallo');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `stocks`
+-- Indexes for table `forums`
 --
-ALTER TABLE `stocks`
+ALTER TABLE `forums`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -59,9 +58,9 @@ ALTER TABLE `stocks`
 --
 
 --
--- AUTO_INCREMENT for table `stocks`
+-- AUTO_INCREMENT for table `forums`
 --
-ALTER TABLE `stocks`
+ALTER TABLE `forums`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 

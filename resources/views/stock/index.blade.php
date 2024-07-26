@@ -1,16 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{asset('assets/css/customCss.css')}}">
-    <title>Stock Market</title>
-</head>
-<body>
+@include("layouts/header")
 <!-- logo part -->
 <div class="logo-part d-flex align-items-center ">
     <div class="container text-center text-white">
@@ -18,7 +6,7 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, saepe!</p>
         <div>
             <a href="">
-            <button type="button" class="btn btn-primary m-2">Contact us!</button>
+            <button type="button" class="btn btn-primary m-2">Live stock advisor</button>
             </a>
             <a href="#main-stock-wrapper">
             <button type="button" class="btn btn-primary m-2">Portfolio</button>
@@ -37,9 +25,9 @@
                 </div>
                 <div class="p-3 mt-5" style="background-color: #014c82;">
                 <p class="mb-5 text-white">Home</p>
-                <p class="mb-5 text-white">Blog, News</p>
-                <p class="mb-5 text-white">Setings</p>
-                <p class="mb-5 text-white"><a href="/forum">Forum</a></p>
+                    <p class="mb-5 text-white"><a href="/forum">Forum</a></p>
+                    <p class="mb-5 text-white">Stock advisor</p>
+                    <p class="mb-5 text-white">Contact</p>
                 </div>
             </div>
         </div>
@@ -171,9 +159,4 @@
     </div>
     <hr>
 @endforeach
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-<script src="{{asset('assets/js/template.js')}}"></script>
-</body>
-</html>
+@include("layouts/footer")

@@ -1,13 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Create</title>
-</head>
-<body>
+@include("layouts/header")
     <h1>Edit Stock</h1>
     @if($errors->any())
         <ul>
@@ -39,6 +30,4 @@
          </div>
         <input type="submit" value="Update">
     </form>
-
-</body>
-</html>
+@include("layouts/footer")
