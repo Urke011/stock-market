@@ -22,3 +22,6 @@ Route::delete('/stock/{stock}/delete', [StockController::class,'delete'])->name(
 Route::get('/forum',[ForumController::class,'index'])->name('forum.index');
 Route::get('/forum/create',[ForumController::class, 'createPost'])->name('forum.create');
 Route::post('/forum', [ForumController::class,'storePost'])->name('forum.store');
+Route::get('/forum/{forum}/edit', [ForumController::class,'edit'])->name('forum.edit');
+Route::put('/forum/{forum}/update', [ForumController::class,'update'])->name('forum.update');
+Route::delete('/forum/{forum}/delete', [ForumController::class,'delete'])->name('forum.delete');
