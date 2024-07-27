@@ -1,5 +1,6 @@
 @include("layouts/header")
-    <h1>Edit Stock</h1>
+<div class="edit-stock-wrapper">
+    <h1 style="background-color: #0f5132;" class="text-white">Edit Stock</h1>
     @if($errors->any())
         <ul>
             @foreach($errors->all() as $error)
@@ -13,21 +14,22 @@
         @csrf
         @method('put')
         <div>
-            <label>Name</label>
-            <input type="text" name="name" placeholder="Name" value="{{$stock->name}}">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control"  name="name" placeholder="Name" value="{{$stock->name}}">
         </div>
         <div>
-            <label>Num stocks</label>
-            <input type="text" name="num_stocks" placeholder="Num stocks" value="{{$stock->num_stocks}}">
+            <label for="exampleFormControlInput1" class="form-label">Num stocks</label>
+            <input type="text" class="form-control" name="num_stocks" placeholder="Num stocks" value="{{$stock->num_stocks}}">
         </div>
          <div>
-             <label>Price</label>
-             <input type="text" name="price" placeholder="Price" value="{{$stock->price}}">
+             <label for="exampleFormControlInput1" class="form-label">Price</label>
+             <input type="text" class="form-control" name="price" placeholder="Price" value="{{$stock->price}}">
          </div>
          <div>
-             <label>Description</label>
-             <input type="text" name="description" placeholder="Description" value="{{$stock->description}}">
+             <label for="exampleFormControlInput1" class="form-label">Description</label>
+             <input type="text" class="form-control" name="description" placeholder="Description" value="{{$stock->description}}">
          </div>
-        <input type="submit" value="Update">
+        <input type="submit" class="btn btn-primary" value="Update">
     </form>
+</div>
 @include("layouts/footer")

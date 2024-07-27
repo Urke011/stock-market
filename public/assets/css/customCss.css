@@ -8,11 +8,17 @@
 .removeBullets{
     list-style-type: none;
 }
-.comment-wrapper{
+.comment-wrapper
+{
     width: 70%;
     margin: 0 auto;
 }
 .edit-forum-btn a{
     text-decoration: none;
     color: #fff;
+}
+.stock-wrapper,
+.edit-stock-wrapper{
+    width: 50%;
+    margin: 0 auto;
 }

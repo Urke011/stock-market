@@ -1,5 +1,6 @@
 @include("layouts/header")
-    <h1>Create Stock</h1>
+<div class="stock-wrapper">
+    <h1 style="background-color: #0f5132;" class="text-white">Create stock</h1>
     @if($errors->any())
         <ul>
             @foreach($errors->all() as $error)
@@ -13,21 +14,22 @@
         @csrf
         @method('post')
         <div>
-            <label>Name</label>
-            <input type="text" name="name" placeholder="Name">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" id="exampleFormControlInput1" placeholder="Name" required>
         </div>
         <div>
             <label>Num stocks</label>
-            <input type="text" name="num_stocks" placeholder="Num stocks">
+            <input type="text" class="form-control" name="num_stocks" id="exampleFormControlInput1" placeholder="Num stocks" required>
         </div>
          <div>
              <label>Price</label>
-             <input type="text" name="price" placeholder="Price">
+             <input type="text" class="form-control" name="price" id="exampleFormControlInput1" placeholder="Price" required>
          </div>
          <div>
              <label>Description</label>
-             <input type="text" name="description" placeholder="Description">
+             <input type="text" class="form-control" name="description" id="exampleFormControlInput1" placeholder="Description" required>
          </div>
-        <input type="submit" value="Save new Stock">
+        <input type="submit" class="btn btn-primary" value="Save new Stock">
     </form>
+</div>
 @include("layouts/footer")
