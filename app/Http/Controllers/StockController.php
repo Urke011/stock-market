@@ -24,6 +24,19 @@ class StockController extends Controller
         $newStock = Stock::create($data);
         return redirect(route('stock.index'));
     }
+
+    public  function search(Request $searchRequest)
+    {
+        //dd($searchRequest['query']);
+        $searchResult = Stock::where('name','LIKE','%'.$searchRequest['query'].'%') ->orWhere('num_stocks', 'LIKE', '%' . $searchRequest['query'] . '%')
+            ->orWhere('price', 'LIKE', '%' . $searchRequest['query'] . '%')
+            ->get();
+        // Check if the search result is empty
+        if ($searchResult->isEmpty()) {
+            return view('stock.index', ['message' => 'Nothing found', 'stocks' => $searchResult]);
+        }
+        return view('stock.index',['stocks'=> $searchResult]);
+    }
     public function edit(Stock $stock){
 
         return view('stock.edit',['stock'=> $stock]);

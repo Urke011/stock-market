@@ -36,47 +36,35 @@
                 <div>
                     <h3>Moj portfolio</h3>
                 </div>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <form type="get" action="{{url('/search')}}" class="d-flex">
+                    <input type="search" class="form-control me-2" name="query" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
             </div>
+            @if(isset($message))
+                <div class="alert alert-warning d-flex align-items-center mt-2" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+                    <div class="">
+                        <h4>{{ $message }}</h4>
+                    </div>
+                </div>
+            @endif
             <div class="d-flex mt-3">
+                @foreach($stocks as $stock)
+                    @php
+                        $createDate = new DateTime($stock->created_at);
+                        $strip = $createDate->format('d-m-Y');
+
+                    @endphp
                 <div class="border col p-2">
                     <p class="text-end"><img src="{{'assets/images/logo/Microsoft_logo_(2012).svg'}}" alt="logo"
                             style="width: 4rem;"></p>
-                    <p class="fw-bold">Name</p>
-                    <p class="fw-bold">Price</p>
-                    <p class="fw-bold">Score</p>
+                    <p class="fw-bold">Name: <span>{{$stock->name}}</span></p>
+                    <p class="fw-bold">Price: <span>{{$stock->price.'$'}}</span></p>
+                    <p class="fw-bold">Number: <span>{{$stock->num_stocks}}</span></p>
+                    <p class="fw-bold">Purchase day: <span><i>{{$strip}}</i></span></p>
                 </div>
-                <div class="border col p-2">
-                    <p class="text-end"><img src="{{'assets/images/logo/Microsoft_logo_(2012).svg'}}" alt="logo"
-                            style="width: 4rem;"></p>
-                    <p class="fw-bold">Name</p>
-                    <p class="fw-bold">Price</p>
-                    <p class="fw-bold">Score</p>
-                </div>
-                <div class="border col p-2">
-                    <p class="text-end"><img src="{{'assets/images/logo/Microsoft_logo_(2012).svg'}}" alt="logo"
-                            style="width: 4rem;"></p>
-                    <p class="fw-bold">Name</p>
-                    <p class="fw-bold">Price</p>
-                    <p class="fw-bold">Score</p>
-                </div>
-                <div class="border col p-2">
-                    <p class="text-end"><img src="{{'assets/images/logo/Microsoft_logo_(2012).svg'}}" alt="logo"
-                            style="width: 4rem;"></p>
-                    <p class="fw-bold">Name</p>
-                    <p class="fw-bold">Price</p>
-                    <p class="fw-bold">Score</p>
-                </div>
-                <div class="border col p-2">
-                    <p class="text-end"><img src="{{'assets/images/logo/Microsoft_logo_(2012).svg'}}" alt="logo"
-                            style="width: 4rem;"></p>
-                    <p class="fw-bold">Name</p>
-                    <p class="fw-bold">Price</p>
-                    <p class="fw-bold">Score</p>
-                </div>
+                @endforeach
             </div>
             <div class="d-flex justify-content-around m-5">
             <div class="line-chart">
