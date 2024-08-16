@@ -17,7 +17,7 @@
 <!-- main part -->
 <div class="main-stock-wrapper bg-light mt-4 p-2" id="main-stock-wrapper" style="overflow: hidden;">
     <div class="row">
-        <div class="col-2">
+        <div class="col-12 col-sm-2 col-md-2 col-lg-2">
             <div class="bg-dark">
                 <div class="bg-dark p-3">
                     <p class="text-white mb-5">Logo</p>
@@ -26,12 +26,12 @@
                 <div class="p-3 mt-5" style="background-color: #014c82;">
                 <p class="mb-5 text-white">Home</p>
                     <p class="mb-5 text-white"><a href="/forum">Forum</a></p>
-                    <p class="mb-5 text-white">Stock advisor</p>
+                    <p class="mb-5 text-white"><a href="/advisor">Stock advisor</a></p>
                     <p class="mb-5 text-white">Contact</p>
                 </div>
             </div>
         </div>
-        <div class="col-10">
+        <div class="col-12 col-sm-10 col-md-10 col-lg-10">
             <div>
                 <div>
                     <h3>Moj portfolio</h3>

@@ -1,7 +1,9 @@
 <?php
 use App\Http\Controllers\StockController;
 use App\Http\Controllers\ForumController;
+use App\Http\Controllers\AdvisorController;
 use App\Models\Stock;
+use App\Models\advisor;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -28,4 +30,6 @@ Route::get('/forum/{forum}/edit', [ForumController::class,'edit'])->name('forum.
 Route::put('/forum/{forum}/update', [ForumController::class,'update'])->name('forum.update');
 Route::delete('/forum/{forum}/delete', [ForumController::class,'delete'])->name('forum.delete');
 
-
+//forum advisor
+Route::get('/advisor',[AdvisorController::class,'create'])->name('advisor.create');
+Route::post('/advisor', [AdvisorController::class,'apiRequest'])->name('advisor.apiRequest');
